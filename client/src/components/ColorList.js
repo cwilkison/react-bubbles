@@ -13,6 +13,7 @@ const ColorList = ({ props, colors, updateColors }) => {
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
 
+
   const editColor = color => {
     setEditing(true);
     setColorToEdit(color);
@@ -22,14 +23,14 @@ const ColorList = ({ props, colors, updateColors }) => {
     e.preventDefault();
     axiosWithAuth()
     .put(`/api/colors/${colorToEdit.id}`, colorToEdit)
-    .then(res => console.log("response from edit", res))
+    .then(res => {window.location.reload();})
     .catch(err => console.log(err, "could not edit color"))
   };
 
   const deleteColor = color => {
     axiosWithAuth()
     .delete(`/api/colors/${color.id}`)
-    .then(res => console.log("response from .delete", res))
+    .then(res => {window.location.reload();})
     .catch(err => console.log(err, "could not delete color"));
   };
 

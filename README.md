@@ -28,7 +28,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [x] Explain what a token is used for.
 
-A token is used by a running server to be issued in exchange for login credentials.  It is cryptic text stored client side using local or session storage.
+A token is used by a running server to usually be issued in exchange for login credentials.  It is cryptic text stored client side using local or session storage.
 
 - [x] What steps can you take in your web apps to keep your data secure?
 
